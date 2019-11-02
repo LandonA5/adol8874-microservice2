@@ -3,8 +3,8 @@ provider "google" {
   region  = "us-central1"
   zone    = "us-central1-c"
 }
-resource "google_compute_instance" "microservice-1" {
-  name         = "microservice-1"
+resource "google_compute_instance" "microservice-2" {
+  name         = "microservice-2"
   machine_type = "f1-micro"
   zone         = "us-central1-c"
   boot_disk {
@@ -20,7 +20,7 @@ resource "google_compute_instance" "microservice-1" {
   }
 }
 resource "google_compute_firewall" "default" {
- name    = "micro-net"
+ name    = "micro-net2"
  network = "default"
 
  allow {
@@ -34,5 +34,5 @@ resource "google_compute_firewall" "default" {
 }
 
   output "ip" {
-     value = "${google_compute_instance.microservice-1.network_interface.0.access_config.0.nat_ip}"
+     value = "${google_compute_instance.microservice-2.network_interface.0.access_config.0.nat_ip}"
   }
