@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t charlestbetz/py-svc .
+docker build -t landona5/microservice2 .

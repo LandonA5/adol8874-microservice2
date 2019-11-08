@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -d -p 8080:5000 charlestbetz/py-svc
+docker run -p 80:5000 landona5/microservice2

@@ -20,5 +20,27 @@ class MainClass(Resource):
 			"status": "Posted new data"
 		}
 
+@name_space.route("/1")
+class MainClass(Resource):
+        def get(self):
+                return {
+                        "status": "Got new data - page 1"
+                }
+        def post(self):
+                return {
+                        "status": "Posted new data"
+                }
+
+@name_space.route("/2")
+class MainClass(Resource):
+        def get(self):
+                return {
+                        "status": "Got new data - page 2"
+                }
+        def post(self):
+                return {
+                        "status": "Posted new data"
+                }
+
 if __name__ == '__main__':
     flask_app.run(debug=True, host='0.0.0.0')
